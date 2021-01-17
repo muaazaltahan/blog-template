@@ -1,0 +1,272 @@
+/* General */
+*{
+	transition:background 0.7s,color 0.7s;
+	font-family:cocon;
+}
+@font-face{
+	font-family:cocon;
+	src:url('cocon.otf');
+}
+body{
+	margin:0;
+	background:#00f;
+}
+a{
+	color:#0ff;
+	text-decoration:none;
+}
+li{list-style-type:none;}
+
+/* LOGO */
+.logo{
+	width:50%;
+	margin:5px 25%;
+}
+
+/* Nav */
+nav{
+	position:sticky;
+	top:0;
+	background:#f23700;
+	width:100%;
+	height:25px;
+}
+nav ul{
+	margin:0;
+	padding:0;
+	height:100%;
+}
+nav ul li{
+	float:left;
+	margin:0;
+	height:100%;
+}
+.nav-btn{
+	background:transparent;
+	color:#fff;
+	border:none;
+	font-size:18px;
+	cursor:pointer;
+	height:100%;
+	padding:0 5px;
+	margin:0;
+}
+.menu{
+	width:0;
+	height:0;
+	overflow:hidden;
+	position:fixed;
+	top:50px;
+	left:25%;
+	transition:width 0.5s,height 0.5s,background 0.5s;
+	background:#f23700;
+	color:#fff;
+	border-radius:10px;
+}
+.menu li{
+	width:100%;
+	height:30px;
+	font-size:18px;
+	text-align:center;
+	padding-bottom:1px;
+	cursor:pointer;
+}
+.menu li.mode{
+	height:28%;
+	font-size:15px;
+}
+.menu button{
+	width:100%;
+	background:transparent;
+	border:none;
+	color:#fff;
+	cursor:pointer;
+	font-size:18px;
+}
+
+/* Header */
+header{
+	border-top:2px solid #fff;
+	border-bottom:2px solid #fff;
+	font-size:19px;
+	background:#008;
+	color:#fff;
+	height:30px;
+	padding:5px 0;
+	margin:5px 0;
+	overflow:hidden;
+}
+.search{
+	width:60%;
+	height:100%;
+	float:left;	
+	border-radius:7px;
+	border:none;
+	margin:0 2px;
+}
+.search-btn{
+	width:25%;
+	height:100%;
+	border:none;
+	float:right;
+	background:#999;
+	border-radius:10px;
+	margin:0 2px;
+	color:#fff;
+	cursor:pointer;
+}
+
+/* New Post Button */
+.newpost{
+	position:fixed;
+	bottom:15px;
+	right:15px;
+	font-size:35px;
+	width:50px;
+	text-align:center;
+	border-radius:2000px;
+	overflow:hidden;
+	background:#0d0;
+}
+.cnp{display:none;}
+
+/* Container */
+.container{
+	width:90%;
+	margin-left:5%;
+	margin-bottom:10px;
+	text-align:center;
+	overflow:hidden;
+}
+
+/* Posts */
+.post{
+	padding:20px 0;
+	margin-bottom:5px;
+	background:#f55900;
+	border-radius:15px;
+}
+.pimg{
+	width:90%;
+	margin:0 5%;
+}
+.postflags{display:none;}
+
+/* signin page */
+#ask{color:#fff;}
+#signt{
+	background:transparent;
+	border:none;
+	color:#fff;
+	font-size:18px;
+	cursor:pointer;
+}
+.signinput{
+	width:90%;
+	border-radius:10px;
+	margin:7px 0;
+}
+.signinput[type="submit"]{
+	background:#3f3;
+	color:#fff;
+	cursor:pointer;
+}
+#signup{display:none;}
+
+/* New Post Page */
+.postcontent{
+	width:90%;
+	border-radius:10px;
+	resize:none;
+	height:230px;
+	margin:10px 0;
+}
+
+/* footer */
+footer{
+	background:#f23700;
+	padding:20px 10px;
+	border-radius:10px;
+}
+
+/* Configure For Bigger Screens */
+@media screen and (min-width: 500px) {
+	nav{height:35px;}
+	.nav-btn{
+		font-size:25px;
+		padding:0 10px;
+	}
+	.menu li,.menu button,.menu li.mode{font-size:22px;}
+	header{height:40px;}
+	.search,.search-btn,.post{font-size:26px;}
+	#ask,#signt,.signinput,.postcontent{font-size:22px;}
+	.signinput{height:30px;}
+}
+@media screen and (min-width: 800px) {
+	nav{height:40px;}
+	.nav-btn,.menu li,.menu button{font-size:27px;}
+	.menu li.mode{font-size:24px;}
+	.nav-btn:hover,.nav-btn:focus,.menu li:hover,.menu button:hover{background:#000;}
+	.newpost{
+		width:70px;
+		height:70px;
+		font-size:50px;
+		transition:width 0.5s,background 0.7s;
+	}
+	.newpost:hover{
+		width:200px;
+		background:#000;
+	}
+	.cnp{font-size:20px;}
+	.newpost:hover .cnp{display:inline-block;}
+	.container{
+		width:95%;
+		margin-left:2.5%;
+	}
+	header{height:45px;}
+	.search,.search-btn,.post{font-size:29px;}
+	.search:focus,.search-btn:hover{
+		background:#000;
+		color:#fff;
+	}
+	.post:hover{color:#fff;}
+	.post{
+		width:300px;
+		float:left;
+		margin-left:1.5%;
+	}
+	#ask,#signt,.signinput{font-size:25px;}
+	.signinput{height:40px;}
+	.signinput[type="submit"]:hover{background:#151;}
+	footer{
+		width:97%;
+		overflow:hidden;
+	}
+}
+@media screen and (min-width: 1200px) {
+	nav{height:50px;}
+	.nav-btn,.menu li,.menu button{font-size:30px;}
+	.menu{top:65px;}
+	header{height:55px;}
+	.search,.search-btn,.post{font-size:32px;}
+	.post{
+		width:350px;
+		margin-left:1%;
+	}
+	#ask,#signt,.signinput,.postcontent{font-size:30px;}
+	.signinput{height:50px;}
+}
+@media screen and (min-width: 2000px) {
+	nav{height:60px;}
+	.nav-btn,.menu li,.menu button{font-size:35px;}
+	.menu li.mode{font-size:25px;}
+	.menu{top:75px;}
+	header{height:65px;}
+	.search,.search-btn,.post{font-size:38px;}
+	.post{
+		width:450px;
+		margin-left:1%;
+	}
+	#ask,#signt,.signinput,.postcontent{font-size:35px;}
+	.signinput{height:60px;}
+}

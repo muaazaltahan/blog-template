@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Blog Template</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<img src="image.jpg" alt="logo" class="logo" /> 
+		<nav>
+			<ul>
+				<li><button class="nav-btn">Home</button></li>
+				<li><button class="nav-btn">SignIn</button></li>
+				<li><button class="nav-btn" onclick="toggleW('flags')">Flags</button></li>
+				<ul class="menu" id="flags">
+					<button onclick="toggleW('flags')">&times;</button>
+					<a onclick="filt('front end')"><li>Front End</li></a>
+					<a onclick="filt('back end')"><li>Back End</li></a>
+					<a onclick="filt('desktop apps')"><li>Desktop Apps</li></a>
+					<a onclick="filt('mobile apps')"><li>Mobile Apps</li></a>
+					<a onclick="filt('other')"><li>Other</li></a>
+					<a onclick="filt('')"><li>All</li></a>
+				</ul>
+				<li><button class="nav-btn" onclick="toggleW('modes')">Mode</button></li>
+				<ul class="menu" id="modes">
+					<button onclick="toggleW('modes')">&times;</button>
+					<a onclick="hMode()">
+						<li class="mode">
+							Happy Mode<br />
+							Orange & Blue
+						</li>
+					</a>
+					<a onclick="dMode()">
+						<li class="mode">
+							Dark Mode<br />
+							Black & Grey
+						</li>
+					</a>
+					<a onclick="lMode()">
+						<li class="mode">
+							Lite Mode<br />
+							Grey & White
+						</li>
+					</a>
+				</ul>
+			</ul>
+		</nav>
+		<header>
+			<input type="text" placeholder="What Is On Your Mind?" class="search" id="sch" />
+			<button class="search-btn" onclick="search()">Search</button>
+		</header>
+		<a href="newpost.html" class="newpost">+<div class="cnp">Create New Post</div></a>
+		<div class="container"> 
+			<form>
+				<input type="text" name="title" class="signinput" placeholder="Title" />
+				<textarea class="postcontent" placeholder="Content"></textarea>
+				<input type="submit" class="signinput" value="Post" />
+			</form>
+			<footer>
+				<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">
+					<img alt="Creative Commons License" src="cc.png" />
+				</a>
+				<br />
+				This work is licensed under a 
+				<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">
+					Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License
+				</a>.
+			</footer>
+		</div>
+		<script src="script.js"></script>
+	</body>
+</html>
