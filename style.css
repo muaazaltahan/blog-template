@@ -143,8 +143,25 @@ header{
 .post{
 	padding:20px 0;
 	margin-bottom:5px;
-	background:#f55900;
 	border-radius:15px;
+}
+.happy{
+	background: -webkit-linear-gradient(0.30turn, #f23700, #f4a954, #f55900);
+	background: -moz-linear-gradient(0.30turn, #f23700, #f4a954, #f55900);
+	background: linear-gradient(0.30turn, #f23700, #f4a954, #f55900);
+	background-color:#f55900;
+}
+.dark{
+	background: -webkit-linear-gradient(0.30turn, #000, #565, #111);
+	background: -moz-linear-gradient(0.30turn, #000, #565, #111);
+	background: linear-gradient(0.30turn, #000, #565, #111);
+	background-color:#111;
+}
+.lite{
+	background: -webkit-linear-gradient(0.30turn, #555, #fff, #666);
+	background: -moz-linear-gradient(0.30turn, #555, #fff, #666);
+	background: linear-gradient(0.30turn, #555, #fff, #666);
+	background-color:#888;
 }
 .pimg{
 	width:90%;
@@ -231,9 +248,17 @@ footer{
 	}
 	.post:hover{color:#fff;}
 	.post{
-		width:300px;
+		height:200px;
+		overflow:hidden;
+	}
+	.pimg{
+		width:40%;
 		float:left;
-		margin-left:1.5%;
+		max-height:100%;
+	}
+	.post p{
+		float:right;
+		margin-right:40px;
 	}
 	#ask,#signt,.signinput{font-size:25px;}
 	.signinput{height:40px;}
@@ -249,10 +274,7 @@ footer{
 	.menu{top:65px;}
 	header{height:55px;}
 	.search,.search-btn,.post{font-size:32px;}
-	.post{
-		width:350px;
-		margin-left:1%;
-	}
+	.post{height:350px;}
 	#ask,#signt,.signinput,.postcontent{font-size:30px;}
 	.signinput{height:50px;}
 }
@@ -263,10 +285,7 @@ footer{
 	.menu{top:75px;}
 	header{height:65px;}
 	.search,.search-btn,.post{font-size:38px;}
-	.post{
-		width:450px;
-		margin-left:1%;
-	}
+	.post{height:400px;}
 	#ask,#signt,.signinput,.postcontent{font-size:35px;}
 	.signinput{height:60px;}
 }

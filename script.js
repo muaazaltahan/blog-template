@@ -31,7 +31,9 @@ function hMode(){
 		menu[i].style.background = '#f23700';
 	}
 	for(i=0;i<post.length;i++){
-		post[i].style.background = '#f55900';
+		post[i].classList.remove("lite");
+		post[i].classList.remove("dark");
+		post[i].classList.add("happy");
 	}
 }
 function dMode(){
@@ -45,7 +47,9 @@ function dMode(){
 		menu[i].style.background = '#121212';
 	}
 	for(i=0;i<post.length;i++){
-		post[i].style.background = '#343434';
+		post[i].classList.remove("lite");
+		post[i].classList.remove("happy");
+		post[i].classList.add("dark");
 	}
 }
 function lMode(){
@@ -59,7 +63,9 @@ function lMode(){
 		menu[i].style.background = '#676767';
 	}
 	for(i=0;i<post.length;i++){
-		post[i].style.background = '#787878';
+		post[i].classList.remove("dark");
+		post[i].classList.remove("happy");
+		post[i].classList.add("lite");
 	}
 }
 function search(){
